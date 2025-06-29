@@ -1,5 +1,4 @@
 
-
 from flask import render_template, request
 from flask_controller import FlaskController
 from app.models.clientes import Clientes
