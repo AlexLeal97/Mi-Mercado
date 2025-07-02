@@ -27,3 +27,13 @@ class UsuariosController(FlaskController):
     def usuarios():
         usuarios = Usuarios.traer_usuarios()
         return render_template('usuarios.html',titulo='Ver productos', usuarios = usuarios)
+    
+    @app.route('/eliminar_usuario/<int:usuario_id>', methods=['POST'])
+    def eliminar_usuario(usuario_id):
+        if Usuarios.eliminar_usuario(usuario_id):
+            return {'success': True, 'message': 'Usuario eliminado correctamente'}, 200
+        return {'success': False, 'message': 'Usuario no encontrado'}, 404
+    
+    @app.route('/editar_usuario.html')
+    def editar_usuario():
+        return render_template('editar_usuario.html')

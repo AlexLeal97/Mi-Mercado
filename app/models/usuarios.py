@@ -31,12 +31,12 @@ class Usuarios(Base):
         usuarios = session.query(Usuarios).all()
         return usuarios
 
-    # Primero obtenemos el usuario a eliminar
-    def eliminar_usuario():
-        usuario = session.query(Usuarios).filter_by(id=1).first()
-
+    def eliminar_usuario(usuario_id):
+   
+        usuario = session.query(Usuarios).filter_by(id=usuario_id).first()
+        
         if usuario:
-            session.delete(usuario)  # Marcamos el objeto para eliminación
-            session.commit()        # Ejecutamos la operación en la BD
-        else:
-            print("Usuario no encontrado")
+            session.delete(usuario)
+            session.commit()
+            return True
+        return False
