@@ -13,7 +13,8 @@ class Usuarios(Base):
     contraseña = Column(String(30), nullable=False)
 
 
-    def __init__(self,nombre,fecha_nacimiento,cedula,telefono,email,area,contraseña): 
+    def __init__(self,id,nombre,fecha_nacimiento,cedula,telefono,email,area,contraseña): 
+    
         self.nombre = nombre
         self.fecha_nacimiento = fecha_nacimiento
         self.cedula = cedula
@@ -31,12 +32,18 @@ class Usuarios(Base):
         usuarios = session.query(Usuarios).all()
         return usuarios
 
-    def eliminar_usuario(usuario_id):
-   
-        usuario = session.query(Usuarios).filter_by(id=usuario_id).first()
-        
-        if usuario:
+    @classmethod
+    def eliminar_usuario(cls, usuario_id):
+        """Elimina un usuario por su ID con manejo de errores"""
+        try:
+            usuario = session.query(cls).get(usuario_id)
+            if not usuario:
+                return False
+                
             session.delete(usuario)
             session.commit()
             return True
-        return False
+        except Exception as e:
+            session.rollback()
+            print(f"Error al eliminar usuario: {str(e)}")
+            return False

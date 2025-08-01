@@ -88,8 +88,9 @@
               <td>{{producto.unidad_medida}}</td>
               <td>{{producto.categoria}}</td>
               <td>
-                <button type="button" class="btn btn-success">Editar</button>
-                <button type="button" class="btn btn-danger">Borrar</button>
+                 <a href="{{ url_for('editar_producto', id=producto.id) }}" class="btn btn-sm btn-warning">Editar</a>
+                <form action="{{ url_for('eliminar_producto', id=producto.id) }}" method="POST" style="display:inline;">
+        <button type="submit" class="btn btn-sm btn-danger">Eliminar</button></form>
               </td>
             </tr>
           {% endfor %}

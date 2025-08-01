@@ -28,3 +28,11 @@ class Productos(Base):
     def traer_productos():
         productos =  session.query(Productos).all()
         return productos
+    
+    
+    def producto_por_id(producto_id):
+         return session.query(Productos).get(producto_id)
+
+
+ 
+            

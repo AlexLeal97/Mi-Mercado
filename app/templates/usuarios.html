@@ -89,17 +89,9 @@
               <td>{{usuario.email}}</td>
               <td>{{usuario.area}}</td>
               <td>
-                <button type="button"  class="btn btn-success">
-                  <a href="editar_usuario.html">
-                    Editar
-                  </a>
-                </button>
-              </td>
-              <td>
-                <form action="usuarios.html" method="POST">
-                                <input type="hidden" name="id" value="{{usuario[0]}}">
-                                <button class="button is-danger">Eliminar</button>
-                            </form>
+                <a href="{{ url_for('editar_usuario', id=usuario.id) }}" class="btn btn-sm btn-warning">Editar</a>
+                <form action="{{ url_for('eliminar_usuario', id=usuario.id) }}" method="POST" style="display:inline;">
+                <button type="submit" class="btn btn-sm btn-danger">Eliminar</button></form>
               </td>
             </tr>
           {% endfor %}

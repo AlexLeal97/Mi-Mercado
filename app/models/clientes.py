@@ -3,7 +3,7 @@ from app.models import session, Base
 
 class Clientes(Base):
     __tablename__ = "clientes"
-    id_cliente = Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
     nombre = Column(String(100), nullable=False, )
     fecha_nacimiento = Column(Date())
     cedula = Column(String(20), unique=True, nullable=False)
@@ -25,3 +25,6 @@ class Clientes(Base):
     def traer_clientes():
         clientes = session.query(Clientes).all()
         return clientes
+    
+    def cliente_por_id(cliente_id):
+         return session.query(Clientes).get(cliente_id)
