@@ -1,114 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="D:\Users\Usuario\Downloads\bootstrap local\bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="D:\Users\Usuario\Downloads\bootstrap local\bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg  navbar-light" style="background-color:#279611;">
-        <div class="container-fluid">
-          <a href="index.html">
-            <img src="../static/images/logosinfondo.png"  alt="" style="height: 30px;">
-          </a>
-          
-          <a class="navbar-brand" href="index.html">
-            <img src="../static/images/icono app.png" height="30px" alt="">Mi Mercado
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav" style="margin-left: auto;"> 
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="facturacion.html">Facturación</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="inventario.html">Inventarios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="usuarios.html">Usuarios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="clientes.html"> Clientes</a>
-              </li>
-              <li>
-                <div>
-                  <a href="inicio_sesion.html">
-                    <img src="../static/images/icono cerrar sesion.png" alt="" style="width: 30px;" > 
-                  </a>
-                </div>
-                
-               
-                
-               
-              </li>
-            </ul>
-          </div>
-        </div>
+  <nav class="navbar navbar-expand-lg  navbar-light" style="background-color:#279611;">
+    <div class="container-fluid">
+      <a href="index.html">
+        <img src="../static/images/logosinfondo.png" alt="" style="height: 30px;">
+      </a>
+
+      <a class="navbar-brand" href="index.html">
+        <img src="../static/images/icono app.png" height="30px" alt="">Mi Mercado
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav" style="margin-left: auto;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="facturacion.html">Facturación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="inventario.html">Inventarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="usuarios.html">Usuarios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="clientes.html"> Clientes</a>
+          </li>
+          <li>
+            <div>
+              <a href="inicio_sesion.html">
+                <img src="../static/images/icono cerrar sesion.png" alt="" style="width: 30px;">
+              </a>
+            </div>
+
+
+
+
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
   <div class="container mt-5">
-        <h2>Nuevo usuario</h2>
-        <form id="formUsuario" action="formulario_usuario.html" method="post" onsubmit="return validarFormulario()">
-          
-      
-          <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo" onblur="validarNombre()">
-            <div class="invalid-feedback" id="errorNombre">El nombre es requerido (mínimo 3 caracteres)</div>
-          </div>
-      
-          <div class="mb-3">
-            <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
-            <input type="date" class="form-control" id="fechaNacimiento" name="fecha_nacimiento" onblur="validarFechaNacimiento()">
-            <div class="invalid-feedback" id="errorFecha">Debes ser mayor de 18 años</div>
-          </div>
-      
-          <div class="mb-3">
-            <label for="cedula" class="form-label">Cédula</label>
-            <input type="text" class="form-control" id="cedula" name="cedula" placeholder="1234567890" onblur="validarCedula()">
-            <div class="invalid-feedback" id="errorCedula">La cédula debe tener entre 8 y 12 dígitos</div>
-          </div>
-      
-          <div class="mb-3">
-            <label for="telefono" class="form-label">Teléfono</label>
-            <input type="text" class="form-control" name="telefono" id="telefono" placeholder="3001234567" onblur="validarTelefono()">
-            <div class="invalid-feedback" id="errorTelefono">El teléfono debe tener 10 dígitos</div>
-          </div>
+    <h2>Nuevo usuario</h2>
+    <form id="formUsuario" action="formulario_usuario.html" method="post" onsubmit="return validarFormulario()">
 
-          <div class="mb-3">
-            <label for="contraseña" class="form-label">Asignar contraseña</label>
-            <input type="text" class="form-control" name="contraseña" id="contraseña" placeholder="Ej=AEx#d%333" >
-            
-          </div>
-      
-          <div class="mb-3">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" name="email" id="email" placeholder="ejemplo@dominio.com" onblur="validarEmail()">
-            <div class="invalid-feedback" id="errorEmail">Ingresa un email válido</div>
-          </div>
-      
-          <div class="mb-4">
-            <label for="area" class="form-label">Área</label>
-            <select class="form-select" name="area" id="area" onblur="validarArea()">
-              <option value="">Seleccione área</option>
-              <option value="1">Jefe de inventarios</option>
-              <option value="2">Cajero</option>
-              <option value="3">Admin</option>
-            </select>
-            <div class="invalid-feedback" id="errorArea">Debes seleccionar un área</div>
-          </div>
-          
-          <div class="d-flex justify-content-center">
-            <button type="submit" class="btn btn-primary">Guardar cambios</button> 
-          </div>
-        </form>
+
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo"
+          onblur="validarNombre()">
+        <div class="invalid-feedback" id="errorNombre">El nombre es requerido (mínimo 3 caracteres)</div>
       </div>
-      <br>
-      <br>
+
+      <div class="mb-3">
+        <label for="fechaNacimiento" class="form-label">Fecha de nacimiento</label>
+        <input type="date" class="form-control" id="fechaNacimiento" name="fecha_nacimiento"
+          onblur="validarFechaNacimiento()">
+        <div class="invalid-feedback" id="errorFecha">Debes ser mayor de 18 años</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="cedula" class="form-label">Cédula</label>
+        <input type="text" class="form-control" id="cedula" name="cedula" placeholder="1234567890"
+          onblur="validarCedula()">
+        <div class="invalid-feedback" id="errorCedula">La cédula debe tener entre 8 y 12 dígitos</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="telefono" class="form-label">Teléfono</label>
+        <input type="text" class="form-control" name="telefono" id="telefono" placeholder="3001234567"
+          onblur="validarTelefono()">
+        <div class="invalid-feedback" id="errorTelefono">El teléfono debe tener 10 dígitos</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="contraseña" class="form-label">Asignar contraseña</label>
+        <input type="text" class="form-control" name="contraseña" id="contraseña" placeholder="Ej=AEx#d%333">
+
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="ejemplo@dominio.com"
+          onblur="validarEmail()">
+        <div class="invalid-feedback" id="errorEmail">Ingresa un email válido</div>
+      </div>
+
+      <div class="mb-4">
+        <label for="area" class="form-label">Área</label>
+        <select class="form-select" name="area" id="area" onblur="validarArea()">
+          <option value="">Seleccione área</option>
+          <option value="1">Jefe de inventarios</option>
+          <option value="2">Cajero</option>
+          <option value="3">Admin</option>
+        </select>
+        <div class="invalid-feedback" id="errorArea">Debes seleccionar un área</div>
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </form>
+  </div>
+  <br>
+  <br>

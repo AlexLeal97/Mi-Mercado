@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f5f5;
+}
+
+.factura-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.info-empresa h2 {
+    color: #333;
+    margin: 0;
+}
+
+.info-empresa p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.datos-factura {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.datos-cliente,
+.datos-factura-info {
+    width: 48%;
+}
+
+.datos-factura h3 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 5px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+    padding: 12px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.totales {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.totales div {
+    margin-bottom: 10px;
+}
+
+.total {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+}
+
+.botones {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-imprimir {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-guardar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-cancelar {
+    background-color: #f44336;
+    color: white;
+}

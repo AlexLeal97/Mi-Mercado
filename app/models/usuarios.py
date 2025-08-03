@@ -32,18 +32,4 @@ class Usuarios(Base):
         usuarios = session.query(Usuarios).all()
         return usuarios
 
-    @classmethod
-    def eliminar_usuario(cls, usuario_id):
-        """Elimina un usuario por su ID con manejo de errores"""
-        try:
-            usuario = session.query(cls).get(usuario_id)
-            if not usuario:
-                return False
-                
-            session.delete(usuario)
-            session.commit()
-            return True
-        except Exception as e:
-            session.rollback()
-            print(f"Error al eliminar usuario: {str(e)}")
-            return False
+  

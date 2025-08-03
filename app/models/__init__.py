@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, create_engine
+from sqlalchemy import Column, Integer, String, Float, ForeignKey, create_engine, Date
 from sqlalchemy.orm import sessionmaker, declarative_base
 import pymysql
 
