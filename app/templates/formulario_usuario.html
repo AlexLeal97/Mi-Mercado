@@ -30,7 +30,7 @@
             <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="facturacion.html">Facturación</a>
+            <a class="nav-link" href="/facturas/nueva">Facturación</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="inventario.html">Inventarios</a>
@@ -43,7 +43,7 @@
           </li>
           <li>
             <div>
-              <a href="inicio_sesion.html">
+              <a href="login.html">
                 <img src="../static/images/icono cerrar sesion.png" alt="" style="width: 30px;">
               </a>
             </div>
@@ -89,11 +89,7 @@
         <div class="invalid-feedback" id="errorTelefono">El teléfono debe tener 10 dígitos</div>
       </div>
 
-      <div class="mb-3">
-        <label for="contraseña" class="form-label">Asignar contraseña</label>
-        <input type="text" class="form-control" name="contraseña" id="contraseña" placeholder="Ej=AEx#d%333">
 
-      </div>
 
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
@@ -102,6 +98,7 @@
         <div class="invalid-feedback" id="errorEmail">Ingresa un email válido</div>
       </div>
 
+      
       <div class="mb-4">
         <label for="area" class="form-label">Área</label>
         <select class="form-select" name="area" id="area" onblur="validarArea()">
@@ -111,6 +108,12 @@
           <option value="3">Admin</option>
         </select>
         <div class="invalid-feedback" id="errorArea">Debes seleccionar un área</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="contraseña" class="form-label">Asignar contraseña</label>
+        <input type="text" class="form-control" name="contraseña" id="contraseña" placeholder="Ej=AEx#d%333">
+
       </div>
 
       <div class="d-flex justify-content-center">

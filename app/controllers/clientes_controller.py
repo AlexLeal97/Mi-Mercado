@@ -15,7 +15,7 @@ class ClientesController(FlaskController):
                 cedula = request.form.get('cedula')
                 telefono = request.form.get('telefono')        
                 email = request.form.get('email')
-                cliente = Clientes(nombre,fecha_nacimiento,cedula,telefono,email,)
+                cliente = Clientes(nombre,fecha_nacimiento,cedula,telefono,email)
                 Clientes.crear_cliente(cliente)
         return render_template('formulario_cliente.html', titulo='Ver productos')
 

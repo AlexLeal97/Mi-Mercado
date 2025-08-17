@@ -29,7 +29,7 @@
             <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="facturacion.html">Facturación</a>
+            <a class="nav-link" href="/facturas/nueva">Facturación</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="inventario.html">Inventarios</a>
@@ -42,7 +42,7 @@
           </li>
           <li>
             <div>
-              <a href="inicio_sesion.html">
+              <a href="login.html">
                 <img src="../static/images/icono cerrar sesion.png" alt="" style="width: 30px;">
               </a>
             </div>
@@ -56,122 +56,51 @@
     </div>
   </nav>
 
-
-  <div class="factura-container">
-    <div class="header">
-      <div class="info-empresa">
-        <h2>Supermercado Los Alpes</h2>
-        <p>RUC: 12345678901</p>
-        <p>Av. Principal 123, Ortega - Tolima</p>
-        <p>Teléfono: (01) 987654321</p>
-        <p>Email: contacto@superlosalpes.com</p>
-      </div>
-      <div>
-        <h1>FACTURA</h1>
-        <p><strong>N°:</strong> F001-000123</p>
-        <p><strong>Fecha:</strong> <span id="fecha-actual">10/06/2023</span></p>
-      </div>
-    </div>
-
-    <div class="datos-factura">
-      <div class="datos-cliente">
-        <h3>Datos del Cliente</h3>
-        <p><strong>Nombre:</strong> <input type="text" placeholder="Nombre completo"
-            style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></p>
-        <p><strong>DNI/RUC:</strong> <input type="text" placeholder="Documento de identidad"
-            style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></p>
-        <p><strong>Dirección:</strong> <input type="text" placeholder="Dirección"
-            style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"></p>
-      </div>
-      <div class="datos-factura-info">
-        <h3>Datos de Facturación</h3>
-        <p><strong>Fecha Emisión:</strong> 10/06/2023</p>
-        <p><strong>Forma de Pago:</strong>
-          <select style="padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
-            <option>Contado</option>
-            <option>Crédito</option>
-            <option>Transferencia</option>
-          </select>
-        </p>
-        <p><strong>Vendedor:</strong> Juan Pérez</p>
-      </div>
-    </div>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Código</th>
-          <th>Descripción</th>
-          <th>Cantidad</th>
-          <th>P. Unitario</th>
-          <th>Descuento</th>
-          <th>Subtotal</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>PROD-001</td>
-          <td>Martillo profesional</td>
-          <td><input type="number" value="2" min="1" style="width: 60px; padding: 5px;"></td>
-          <td>S/ 35.00</td>
-          <td>0%</td>
-          <td>S/ 70.00</td>
-          <td><button
-              style="background: #f44336; color: white; border: none; padding: 5px 10px; border-radius: 3px;">X</button>
-          </td>
-        </tr>
-        <tr>
-          <td>PROD-045</td>
-          <td>Destornillador set 6 piezas</td>
-          <td><input type="number" value="1" min="1" style="width: 60px; padding: 5px;"></td>
-          <td>S/ 45.00</td>
-          <td>10%</td>
-          <td>S/ 40.50</td>
-          <td><button
-              style="background: #f44336; color: white; border: none; padding: 5px 10px; border-radius: 3px;">X</button>
-          </td>
-        </tr>
-        <tr>
-          <td colspan="5">
-            <input type="text" placeholder="Buscar producto..."
-              style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px;">
-          </td>
-          <td colspan="2">
-            <button style="background: #4CAF50; color: white; border: none; padding: 8px; width: 100%;">Agregar</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <div class="totales">
-      <div>
-        <span>Subtotal: </span>
-        <span>S/ 110.50</span>
-      </div>
-      <div>
-        <span>IGV (18%): </span>
-        <span>S/ 19.89</span>
-      </div>
-      <div class="total">
-        <span>TOTAL: </span>
-        <span>S/ 130.39</span>
-      </div>
-    </div>
-
-    <div class="botones">
-      <button class="btn-cancelar">Cancelar</button>
-      <button class="btn-guardar">Guardar Factura</button>
-      <button class="btn-imprimir">Imprimir</button>
-    </div>
-  </div>
-
-  <script>
-
-    document.getElementById('fecha-actual').textContent = new Date().toLocaleDateString('es-PE');
+  <header class="bg-white text-dark text-center py-5">
+    <h1>Usuarios</h1>
+    <p>Administra los usuarios y permisos del sistema.</p>
+  </header>
 
 
-  </script>
+  <div class="container">
+    <div class="row">
+      <div class="col d-flex  justify-content-center ">
+        <div class="card shadow">
+          <div class="card-body" style="background-color: #dee2e6;">
+            <div class="container d-flex  align-items-center">
+              <img src="../static/images/iconoagregarusuario.png" alt="" style=" width: 50px;" class="">
+            </div>
+            <br>
+            <form>
+
+              <section id="crearnuevousuario" class="mb-5 d-flex justify-content-center ">
+
+                <a href="formulario_usuario.html" class="btn " style="background-color: #20c997;">Agregar usuario</a>
+              </section>
+            </form>
+          </div>
+        </div>
+
+        <div class="col d-flex  justify-content-center">
+          <div class="card shadow">
+            <div class="card-body" style="background-color: #dee2e6;">
+              <div class="container d-flex align-items-">
+                <img src="../static/images/iconoeditarusuario.png" alt="" style=" width: 50px;" class="">
+              </div>
+              <br>
+              <form>
+
+                <section id="crearnuevousuario" class="mb-5 d-flex justify-content-center align-items-center">
+
+                  <a href="modificarusuario.html" class="btn " style="background-color: #20c997;">Modificar usuario</a>
+                </section>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+
 </body>
 
 </html>

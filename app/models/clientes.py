@@ -1,5 +1,6 @@
 from sqlalchemy import Column, Integer, String, Float, ForeignKey,Date
 from app.models import session, Base
+from sqlalchemy.orm import relationship
 
 class Clientes(Base):
     __tablename__ = "clientes"
@@ -9,6 +10,8 @@ class Clientes(Base):
     cedula = Column(String(20), unique=True, nullable=False)
     telefono = Column(String(20))
     email = Column(String(20))
+
+   
 
     def __init__(self,nombre,fecha_nacimiento,cedula,telefono,email):
         self.nombre = nombre

@@ -1,8 +1,11 @@
-from sqlalchemy import Column, Integer, String, Float, ForeignKey, create_engine, Date
+from sqlalchemy import  create_engine
 from sqlalchemy.orm import sessionmaker, declarative_base
 import pymysql
 
+
 engine = create_engine("mysql+pymysql://root@localhost/mi mercado?charset=utf8mb4")
+
+
 
 connection = engine.connect()
 
@@ -12,3 +15,6 @@ session = Session()
 
 Base = declarative_base()
 Base.metadata.bind = engine
+
+
+Base.metadata.create_all(engine)
