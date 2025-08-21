@@ -14,10 +14,8 @@ class Categorias(Base):
     
     @classmethod
     def traer_todas(cls):
-        """Obtiene todas las categorías de la base de datos"""
         return session.query(cls).order_by(cls.nombre).all()
     
     @classmethod
     def obtener_por_id(cls, id):
-        """Obtiene una categoría por su ID"""
         return session.query(cls).get(id)

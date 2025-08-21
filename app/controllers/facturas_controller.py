@@ -12,7 +12,7 @@ class FacturasController:
         facturas = Facturas.traer_facturas()
         return render_template('/lista_facturas.html', facturas=facturas)
 
-    @app.route('/facturas/nueva', methods=['GET', 'POST'])
+    @app.route('/nueva_factura.html', methods=['GET', 'POST'])
     def crear_factura():
         if request.method == 'POST':
             try:
